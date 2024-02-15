@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Espaço Infantil CCB Vila Clara 2024</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos para o logo */
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="https://congregacaocristanobrasil.org.br/assets/images/logo-ccb-light.png" alt="Logo da sua empresa" class="logo">
+    </div>
+    
+        <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Cadastro Espaço Infantil CCB Vila Clara 2024</h2>
+    <form id="cadastroForm" action="https://script.google.com/macros/s/AKfycbxYDn9fUBU8IELHJ9x8xmivVOZFFsMrdB3nxOb9FoBFMTUY7_gN7lLtuWGy8ps5IOvS/exec" method="POST">
+        <fieldset>
+            <legend>Responsáveis</legend>
+            <div>
+                <label for="resp1Nome">Nome do Responsável 1:</label>
+                <input type="text" id="resp1Nome" name="resp1Nome" required>
+                <label for="resp1Telefone">Telefone do Responsável 1:</label>
+                <input type="tel" id="resp1Telefone" name="resp1Telefone" required>
+            </div>
+            <div>
+                <label for="resp2Nome">Nome do Responsável 2:</label>
+                <input type="text" id="resp2Nome" name="resp2Nome">
+                <label for="resp2Telefone">Telefone do Responsável 2:</label>
+                <input type="tel" id="resp2Telefone" name="resp2Telefone">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Filhos</legend>
+            <div id="filhosContainer">
+                <!-- Aqui serão adicionados dinamicamente os campos de cada filho -->
+            </div>
+            <button type="button" class="button" id="addFilhoBtn">Adicionar Filho</button>
+        </fieldset>
+        <button type="button" class="button" id="enviarBtn">Enviar</button>
+
+    </form>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

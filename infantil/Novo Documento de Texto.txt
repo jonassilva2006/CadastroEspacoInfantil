@@ -1,0 +1,29 @@
+function doPost(e) {
+  var data = JSON.parse(e.postData.contents);
+  
+  var resp1Nome = data.resp1Nome;
+  var resp1Telefone = data.resp1Telefone;
+  var resp2Nome = data.resp2Nome;
+  var resp2Telefone = data.resp2Telefone;
+  var filhos = data.filhos;
+
+  salvarCadastroFamilia(resp1Nome, resp1Telefone, resp2Nome, resp2Telefone, filhos);
+
+  return ContentService.createTextOutput("Dados salvos com sucesso!").setMimeType(ContentService.MimeType.TEXT);
+}
+
+function salvarCadastroFamilia(resp1Nome, resp1Telefone, resp2Nome, resp2Telefone, filhos) {
+  var planilha = SpreadsheetApp.getActiveSpreadsheet();
+  var aba = planilha.getSheetByName('filhos'); // Substitua 'Nome da Aba' pelo nome da aba da sua planilha
+
+  // Adiciona os cabeçalhos se ainda não existirem
+  if (aba.getLastRow() == 0) {
+    aba.appendRow(['Nome Responsável 1', 'Telefone Responsável 1', 'Nome Responsável 2', 'Telefone Responsável 2', 'Nome Filho', 'Data de Nascimento']);
+  }
+
+  // Itera sobre os filhos e salva os dados na planilha
+  filhos.forEach(function(filho) {
+    var dados = [resp1Nome, resp1Telefone, resp2Nome, resp2Telefone, filho.nome, filho.dataNascimento];
+    aba.appendRow(dados);
+  });
+}

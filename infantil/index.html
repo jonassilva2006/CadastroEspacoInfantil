@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        /* Reset de estilos para garantir consistência entre navegadores */
+        body, h1, p, ul, button {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilos para o cabeçalho */
+        header {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Estilos para o título */
+        h1 {
+            color: #333;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para o conteúdo */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Estilos para o botão */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Estilos para a lista */
+        ul {
+            margin-bottom: 20px;
+        }
+
+        ul li {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        /* Estilos para o logo */
+        .logo {
+            display: block;
+            margin: 0 auto 20px;
+            max-width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://congregacaocristanobrasil.org.br/assets/images/logo-ccb-light.png" alt="Logo" class="logo">
+        <h1>Bem-vindo ao Cadastro para o Espaço Infantil!</h1>
+    </header>
+    
+    <div class="container">
+        <p>Gostaríamos de solicitar à estimada Irmandade que preencha gentilmente o formulário de cadastro destinado às crianças que frequentarão o Espaço Infantil.</p>
+        
+        <p>É imprescindível que o preenchimento seja feito o mais breve possível, a fim de que possamos prosseguir com os preparativos para a implementação do Espaço Infantil em nossa Casa de Oração.</p>
+        
+        <p>Agradecemos imensamente pela colaboração e participação de todos.</p>
+        
+        <p>Que Deus abençoe a cada um,</p>
+        <br>
+        
+        <p>Ministério CCB Vila Clara</p>
+
+        <p>Por favor, siga estas instruções ao preencher o formulário:</p>
+
+        <ul>
+            <li>Clique em "Adicionar Filhos" para inserir as informações de cada criança.</li>
+            <li>Forneça o nome completo e a data de nascimento de cada filho.</li>
+            <li>Garanta que ao menos um responsável seja cadastrado junto com o número de telefone para contato.</li>
+        </ul>
+
+        <button onclick="window.location.href = 'formulario.html';">Preencher Formulário</button>
+    </div>
+</body>
+</html>
